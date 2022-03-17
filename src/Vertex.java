@@ -28,9 +28,3 @@ public class Vertex {
         return connectedWith;
     }
 }
-
-
-
-
-
-

@@ -24,6 +24,8 @@ public class Main {
         System.out.println("Grafo é circular? " + graph.dfsAlgorithm(v1));
 
         System.out.println("---------------------------------------------------------------");
+
+        graph.resetVisited();
         
         graph.addEdge(v2, v3);
 
