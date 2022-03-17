@@ -30,9 +30,9 @@ public class Graph {
             list += v.name + " -> ";
             for (Edge e : v.adj) {
                 Vertex v2 = e.destiny;
-                list += v2.name + ", ";
+                list += v2.name + " -> ";
             }
-            list += "- \n";
+            list += "-| \n";
         }
 
         return list;
@@ -57,3 +57,6 @@ public class Graph {
         return response;
     }
 }
+
+
+

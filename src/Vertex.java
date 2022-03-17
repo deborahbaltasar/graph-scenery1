@@ -25,9 +25,12 @@ public class Vertex {
         for (Edge x : this.adj) {
             connectedWith.add(x.destiny);
         }
-
         return connectedWith;
     }
-
-
 }
+
+
+
+
+
+
