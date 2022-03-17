@@ -4,12 +4,12 @@ import java.util.List;
 public class Vertex {
     String name;
     List<Edge> adj;
-    boolean counted;
+    boolean visited;
 
     public Vertex(String name) {
         this.name = name;
         this.adj = new ArrayList<Edge>();
-        this.counted = false;
+        this.visited = false;
     }
 
     public void addAdj(Edge x) {

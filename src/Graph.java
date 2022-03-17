@@ -32,9 +32,28 @@ public class Graph {
                 Vertex v2 = e.destiny;
                 list += v2.name + ", ";
             }
-            list += "end \n";
+            list += "- \n";
         }
 
         return list;
+    }
+
+    public void resetVisited() {
+        for(Vertex v : vertexs) {
+            v.visited = false;
+        }
+    }
+
+    public boolean dfsAlgorithm(Vertex node) {
+        boolean response = false;
+        List<Vertex> connectedWith = node.getConnections();
+        node.visited = true;
+        for(int i = 0; i<connectedWith.size(); i++) {
+            Vertex x = connectedWith.get(i);
+            if(x.visited && x != null) response = true;
+            if(x != null && !x.visited) dfsAlgorithm(x);
+        }
+
+        return response;
     }
 }

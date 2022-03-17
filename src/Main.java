@@ -12,9 +12,12 @@ public class Main {
 
         graph.addEdge(v1, v2);
         graph.addEdge(v1, v3);
+        //graph.addEdge(v2, v3);
         graph.addEdge(v3, v4);
         graph.addEdge(v3, v5);
 
         System.out.println(graph.printAdjList());
+
+        System.out.print("Grafo é circular? " + graph.dfsAlgorithm(v1));
     }
 }
